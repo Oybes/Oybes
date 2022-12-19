@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <title>Hello Azure - Python Quickstart</title>
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"
+  />
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='favicon.ico') }}"
+  />
+</head>
+<html>
+  <body>
+    <main>
+      <div class="px-4 py-3 my-2 text-center">
+        <img
+          class="d-block mx-auto mb-4"
+          src="{{ url_for('static', filename='images/azure-icon.svg') }}"
+          alt="Azure Logo"
+          width="192"
+          height="192"
+        />
+        <!-- <img  src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+        <h1 class="display-6 fw-bold">Hello {{name}}</h1>
+        <form method="POST" action="/submit">
+          <input
+            type="text"
+            name="systemmailbox"
+            placeholder="systemmailbox"
+          /><br />
+          <input
+            type="text"
+            name="customername"
+            placeholder="customername"
+          /><br />
+          <input
+            type="text"
+            name="secureMailBoxGroup"
+            placeholder="secureMailBoxGroup"
+          /><br />
+          <input type="text" name="webAddinId" placeholder="webAddinId" /><br />
+          <input type="text" name="Url" placeholder="Url" /><br />
+          <!-- <input type="text" name="value3" placeholder="Value 3">--><br />
+          <button type="submit">Download</button>
+        </form>
+        <a
+          href="{{ url_for('index') }}"
+          class="btn btn-primary btn-lg px-4 gap-3"
+          >Back home</a
+        >
+      </div>
+    </main>
+  </body>
+</html>
